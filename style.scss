@@ -1,0 +1,132 @@
+    $aquatic:rgba(40, 43, 218, 1);
+    $terrestrial:rgba(199, 221, 76, 1);
+    $flying:rgba(40, 218, 209, 1);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    html {
+        font-size: 10px;
+        background-color: #eeee;
+        font-family: 'Roboto';
+    }
+    
+    .box {
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 98rem;
+        display: flex;
+        padding: 5rem;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1rem;
+        background-color: white;
+        .imgs {
+            max-width: 40rem;
+            min-width: 40rem;
+            height: 30rem;
+            position: relative;
+            transform: translateX(-9rem);
+            box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 2rem;
+            }
+            &::before {
+                border-radius: 2rem;
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            &-a::before {
+                background: rgba(40, 43, 218, 0.6);
+            }
+            &-f::before {
+                background: rgba(65, 235, 235, 0.5);
+            }
+            &-t::before {
+                background: rgba(199, 221, 76, 0.5);
+            }
+        }
+        .conteudo {
+            text-align: center;
+            font-size: 2rem;
+            h1 {
+                transform: translateY(-5rem);
+                font-size: 4rem;
+                font-weight: bold;
+            }
+            .btn {
+                display: block;
+                padding: 1rem;
+                width: 30%;
+                border-radius: 0.6rem;
+                margin-top: 5rem;
+                margin-left: auto;
+                margin-right: auto;
+                text-decoration: none;
+                &-a {
+                    background: $aquatic;
+                    color: #EEE;
+                }
+                &-a:hover {
+                    color: $aquatic;
+                    background: #eee;
+                }
+                &-t {
+                    background: $terrestrial;
+                    color: #EEE;
+                }
+                &-t:hover {
+                    background: #eee;
+                    color: $terrestrial;
+                }
+                &-f {
+                    background: $flying;
+                    color: #EEE;
+                }
+                &-f:hover {
+                    background: #eee;
+                    color: $flying;
+                }
+            }
+        }
+    }
+    
+    @media (max-width:1061px) {
+        .box {
+            max-width: 80rem;
+            margin-top: 4rem;
+            .conteudo {
+                h1 {
+                    transform: translateY(-2rem);
+                }
+                .btn {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width:887px) {
+        .box {
+            padding: 2.5rem;
+            flex-direction: column;
+            margin-top: 10rem;
+            .imgs {
+                max-width: 100%;
+                min-width: 100%;
+                transform: translate(0, -8rem);
+            }
+        }
+    }

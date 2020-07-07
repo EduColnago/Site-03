@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+  background-color: #eeee;
+  font-family: 'Roboto';
+}
+
+.box {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 98rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.box .imgs {
+  max-width: 40rem;
+  min-width: 40rem;
+  height: 30rem;
+  position: relative;
+  -webkit-transform: translateX(-9rem);
+          transform: translateX(-9rem);
+  -webkit-box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+}
+
+.box .imgs img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem;
+}
+
+.box .imgs::before {
+  border-radius: 2rem;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box .imgs-a::before {
+  background: rgba(40, 43, 218, 0.6);
+}
+
+.box .imgs-f::before {
+  background: rgba(65, 235, 235, 0.5);
+}
+
+.box .imgs-t::before {
+  background: rgba(199, 221, 76, 0.5);
+}
+
+.box .conteudo {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.box .conteudo h1 {
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.box .conteudo .btn {
+  display: block;
+  padding: 1rem;
+  width: 30%;
+  border-radius: 0.6rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.box .conteudo .btn-a {
+  background: #282bda;
+  color: #EEE;
+}
+
+.box .conteudo .btn-a:hover {
+  color: #282bda;
+  background: #eee;
+}
+
+.box .conteudo .btn-t {
+  background: #c7dd4c;
+  color: #EEE;
+}
+
+.box .conteudo .btn-t:hover {
+  background: #eee;
+  color: #c7dd4c;
+}
+
+.box .conteudo .btn-f {
+  background: #28dad1;
+  color: #EEE;
+}
+
+.box .conteudo .btn-f:hover {
+  background: #eee;
+  color: #28dad1;
+}
+
+@media (max-width: 1061px) {
+  .box {
+    max-width: 80rem;
+    margin-top: 4rem;
+  }
+  .box .conteudo h1 {
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  .box .conteudo .btn {
+    width: 60%;
+  }
+}
+
+@media (max-width: 887px) {
+  .box {
+    padding: 2.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10rem;
+  }
+  .box .imgs {
+    max-width: 100%;
+    min-width: 100%;
+    -webkit-transform: translate(0, -8rem);
+            transform: translate(0, -8rem);
+  }
+}
+/*# sourceMappingURL=style.css.map */
